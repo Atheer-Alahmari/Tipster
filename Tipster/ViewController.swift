@@ -69,8 +69,11 @@ class ViewController: UIViewController {
                             break
                 case "c": showNo_Label.text! = "0"
                             break
-                case "." : showNo_Label.text! += "."
-                            break
+                case "." : if showNo_Label.text!.contains("."){
+                                return
+                                         }
+                                showNo_Label.text! += "."
+                                break
                 default  : showNo_Label.text! = "00.000"
                             break
                 
